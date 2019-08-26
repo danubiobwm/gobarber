@@ -61,6 +61,16 @@ class AppointmentController {
     }
 
     /**
+     * Verificação de agendamento se vou o mesmo provider
+     * Validação Concluida.
+     */
+    if (provider_id === req.userId) {
+      return res
+        .status(401)
+        .json({ error: 'Não pode fazer agendamento para você mesmo!' });
+    }
+
+    /**
      * Verificação de Datas passadas
      * check for past dates
      */

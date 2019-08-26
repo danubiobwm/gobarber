@@ -29,6 +29,7 @@ routes.get('/providers', ProviderController.index);
 // Rota de Appointments
 routes.get('/appointments', AppointmentController.index);
 routes.post('/appointments', AppointmentController.store);
+routes.delete('/appointments/:id', AppointmentController.delete);
 
 // Rota de Schedule list from Provider
 routes.get('/schedule', ScheduleController.index);

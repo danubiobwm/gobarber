@@ -8,6 +8,7 @@ import FileController from './app/controllers/FileController';
 import ProviderController from './app/controllers/ProviderController';
 import AppointmentController from './app/controllers/AppointmentController';
 import ScheduleController from './app/controllers/ScheduleController';
+import NotificationController from './app/controllers/NotificationController';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -31,6 +32,8 @@ routes.post('/appointments', AppointmentController.store);
 
 // Rota de Schedule list from Provider
 routes.get('/schedule', ScheduleController.index);
+// Lista Notification
+routes.get('/notifications', NotificationController.index);
 
 // rota de Uploads
 routes.post('/files', upload.single('file'), FileController.store);

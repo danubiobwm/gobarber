@@ -25,6 +25,7 @@ routes.put('/users', UserController.update);
 routes.get('/providers', ProviderController.index);
 
 // Rota de Appointments
+routes.get('/appointments', AppointmentController.index);
 routes.post('/appointments', AppointmentController.store);
 
 // rota de Uploads

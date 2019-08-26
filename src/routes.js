@@ -7,6 +7,7 @@ import SessionController from './app/controllers/SessionController';
 import FileController from './app/controllers/FileController';
 import ProviderController from './app/controllers/ProviderController';
 import AppointmentController from './app/controllers/AppointmentController';
+import ScheduleController from './app/controllers/ScheduleController';
 
 import authMiddleware from './app/middlewares/auth';
 
@@ -27,6 +28,9 @@ routes.get('/providers', ProviderController.index);
 // Rota de Appointments
 routes.get('/appointments', AppointmentController.index);
 routes.post('/appointments', AppointmentController.store);
+
+// Rota de Schedule list from Provider
+routes.get('/schedule', ScheduleController.index);
 
 // rota de Uploads
 routes.post('/files', upload.single('file'), FileController.store);
